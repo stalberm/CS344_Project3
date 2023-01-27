@@ -14,8 +14,7 @@ int main(void) {
     commands = (char**)malloc(128*sizeof(char*));
 
     while("Yo Mama") {
-        printf("My PID is %d\n", getpid());
-        printf("Enter something: ");
+        printf("mush$ ");
         fflush(stdout);
         fgets(s, sizeof s, stdin);
         char *token;
