@@ -4,10 +4,6 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-void handleExternal() {
-
-}
-
 int main(void) {
     char s[2048];
     char** commands;
@@ -26,6 +22,9 @@ int main(void) {
             } while ((token = strtok(NULL, " \t\n\r")) != NULL);
         }
         commands[count] = NULL;
+        if (commands[0] == NULL) {
+          continue;
+        }
 
         if (strcmp(commands[0],"cd") == 0) {
             int d;
